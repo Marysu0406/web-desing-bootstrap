@@ -1,0 +1,126 @@
+/* Configuración general para simular el fondo de la imagen */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e8f0fe; /* Fondo suave para que resalte la tarjeta blanca */
+}
+
+/* Tarjeta principal del formulario */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos */
+.form-title {
+    color: #2b3a55;
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.form-subtitle {
+    color: #4a5568;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Etiquetas (Labels) */
+.form-label {
+    font-size: 0.8rem;
+    color: #2b3a55;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+/* Inputs personalizados */
+.custom-input {
+    background-color: #f7f9fc !important; /* Fondo ligeramente azul/gris */
+    border: 1px solid #d2d6dc;
+    border-radius: 8px;
+    padding: 0.5rem 1rem 0.5rem 2.5rem; /* El padding izquierdo da espacio para el ícono */
+    font-size: 0.9rem;
+    color: #4a5568;
+    box-shadow: none !important;
+}
+
+.custom-input:focus {
+    border-color: #007bff;
+    background-color: #ffffff !important;
+}
+
+/* Íconos dentro de los inputs */
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.input-icon-right {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Select de País */
+select.custom-input {
+    padding-left: 2.5rem;
+}
+
+/* Checkbox y Términos */
+.terms-text {
+    font-size: 0.8rem;
+    color: #2b3a55;
+}
+
+.terms-link {
+    color: #2b3a55;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Botón principal */
+.btn-primary-custom {
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0056b3;
+}
+
+/* Redes Sociales */
+.social-text {
+    font-size: 0.8rem;
+    color: #2b3a55;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.social-icons i:hover {
+    transform: scale(1.1);
+}
