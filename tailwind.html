@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Registro Tailwind</title>
- <link rel="icon" type="image/png" href="./assets/img/favicon2.png">
+<title>QuickForm Modern</title>
+ <!--Favicon-->
+    <link rel="icon" type="image/png" href="./assets/img/favicon2.png">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,21 +16,24 @@
 
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+
+<body class="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex flex-col">
+
 
 <!-- NAVBAR -->
-<nav class="bg-gray-900 text-white p-4">
 
-<div class="max-w-6xl mx-auto flex justify-between items-center">
+<nav class="bg-black/30 backdrop-blur-md text-white">
+
+<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
 <h1 class="font-bold text-lg">
 <i class="fa-solid fa-code"></i> Tailwind
 </h1>
 
-<div class="space-x-4">
+<div class="space-x-6">
 
-<a href="index.html" class="hover:text-blue-400">
-Formulario Bootstrap
+<a href="index.html" class="hover:text-yellow-300">
+Formulario Original
 </a>
 
 </div>
@@ -42,134 +47,127 @@ Formulario Bootstrap
 
 <div class="flex-grow flex items-center justify-center">
 
-<div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+<div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-md">
 
-<h2 class="text-2xl font-semibold text-center mb-2">
-Crea tu Cuenta Gratis
+<h2 class="text-3xl font-bold text-center mb-2">
+Create Account
 </h2>
 
-<p class="text-gray-500 text-center mb-6">
-Regístrate en segundos y comienza a explorar
+<p class="text-gray-500 text-center mb-8">
+Join QuickForm today
 </p>
 
 
 <form class="space-y-4">
 
 <!-- Nombre -->
-<div>
-<label class="block text-sm font-medium mb-1">
-Nombre Completo
-</label>
 
 <div class="relative">
 
-<i class="fa-solid fa-user-astronaut absolute left-3 top-3 text-gray-400"></i>
+<i class="fa-solid fa-user absolute left-3 top-3 text-gray-400"></i>
 
-<input type="text"
-placeholder="Ej. Sofía Rodríguez"
-class="w-full border rounded-lg py-2 pl-10 pr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input
+type="text"
+placeholder="Nombre completo"
+class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-</div>
 </div>
 
 
 <!-- Email -->
-<div>
-<label class="block text-sm font-medium mb-1">
-Correo Electrónico
-</label>
 
 <div class="relative">
 
 <i class="fa-solid fa-at absolute left-3 top-3 text-gray-400"></i>
 
-<input type="email"
-placeholder="tuemail@ejemplo.com"
-class="w-full border rounded-lg py-2 pl-10 pr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input
+type="email"
+placeholder="Correo electrónico"
+class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-</div>
 </div>
 
 
 <!-- Password -->
-<div>
-<label class="block text-sm font-medium mb-1">
-Contraseña
-</label>
 
 <div class="relative">
 
 <i class="fa-solid fa-lock absolute left-3 top-3 text-gray-400"></i>
 
-<input type="password"
-placeholder="********"
-class="w-full border rounded-lg py-2 pl-10 pr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input
+type="password"
+placeholder="Contraseña"
+class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-</div>
 </div>
 
 
 <!-- Teléfono -->
-<div>
-<label class="block text-sm font-medium mb-1">
-Teléfono
-</label>
 
 <div class="relative">
 
-<i class="fa-solid fa-mobile-button absolute left-3 top-3 text-gray-400"></i>
+<i class="fa-solid fa-phone absolute left-3 top-3 text-gray-400"></i>
 
-<input type="tel"
-placeholder="+52 123 456 7890"
-class="w-full border rounded-lg py-2 pl-10 pr-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+<input
+type="tel"
+placeholder="Teléfono"
+class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-</div>
 </div>
 
 
 <!-- País -->
-<div>
-<label class="block text-sm font-medium mb-1">
-País
-</label>
 
-<select class="w-full border rounded-lg py-2 px-3 focus:ring-2 focus:ring-blue-500">
-<option selected disabled>Seleccionar</option>
+<div class="relative">
+
+<i class="fa-solid fa-earth-americas absolute left-3 top-3 text-gray-400"></i>
+
+<select
+class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+
+<option selected disabled>Selecciona tu país</option>
 <option>México</option>
 <option>Colombia</option>
 <option>Argentina</option>
 <option>España</option>
+
 </select>
+
 </div>
 
 
 <!-- Términos -->
-<div class="flex items-center space-x-2">
+
+<div class="flex items-center gap-2 text-sm">
 
 <input type="checkbox">
 
-<label class="text-sm">
-Acepto los <a href="#" class="text-blue-500">Términos y Condiciones</a>
-</label>
+<span>Acepto los términos y condiciones</span>
 
 </div>
 
 
 <!-- Botón -->
-<button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
-CREAR CUENTA
+
+<button
+class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+
+Crear Cuenta
+
 </button>
 
 
-<!-- Redes -->
-<div class="text-center text-sm text-gray-500">
-O regístrate con
+<div class="text-center text-gray-500 text-sm">
+
+o regístrate con
+
 </div>
 
-<div class="flex justify-center space-x-4 text-xl">
 
-<i class="fa-brands fa-google text-blue-500"></i>
-<i class="fa-brands fa-facebook text-blue-500"></i>
+<div class="flex justify-center gap-6 text-2xl">
+
+<i class="fa-brands fa-google text-red-500"></i>
+<i class="fa-brands fa-facebook text-blue-600"></i>
 <i class="fa-brands fa-apple"></i>
 
 </div>
@@ -183,13 +181,14 @@ O regístrate con
 
 <!-- FOOTER -->
 
-<footer class="bg-gray-900 text-white text-center p-4">
+<footer class="text-white text-center p-4">
 
-<p>© 2026 Tailwind</p>
+<p>© 2026 QuickForm</p>
 
-<p>Desarrollado por <strong>Maricarmen Suárez</strong></p>
+<p>Desarrollado por <strong> Maricarmen Suarez ♡ </strong></p>
 
 </footer>
+
 
 </body>
 </html>
