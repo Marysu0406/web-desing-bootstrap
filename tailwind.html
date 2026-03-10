@@ -3,16 +3,39 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Formulario Tailwind</title>
- <!--Favicon-->
+    <title>Formulario Tailwind</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/Img/favicon2.png">
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+        /* Oculta el checkbox */
+        #mostrarPassword {
+            display: none;
+        }
+
+        /* Oculta visualmente la contraseña */
+        .password-field {
+            -webkit-text-security: disc;
+        }
+
+        /* Mostrar contraseña cuando se presiona el ojo */
+        #mostrarPassword:checked ~ .password-field {
+            -webkit-text-security: none;
+        }
+
+    </style>
 
 </head>
 
@@ -20,174 +43,181 @@
 <body class="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex flex-col">
 
 
-<!-- NAVBAR -->
+    <!-- NAVBAR -->
+    <nav class="bg-black/30 backdrop-blur-md text-white">
 
-<nav class="bg-black/30 backdrop-blur-md text-white">
+        <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
 
-<div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+            <h1 class="font-bold text-lg">
+                <i class="fa-solid fa-code"></i> Tailwind
+            </h1>
 
-<h1 class="font-bold text-lg">
-<i class="fa-solid fa-code"></i> Tailwind
-</h1>
+            <div class="space-x-6">
 
-<div class="space-x-6">
+                <a href="index.html" class="hover:text-yellow-300">
+                    Formulario Original
+                </a>
 
-<a href="index.html" class="hover:text-yellow-300">
-Formulario Original
-</a>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </nav>
 
-</nav>
 
+    <!-- FORMULARIO -->
+    <div class="flex-grow flex items-center justify-center">
 
-<!-- FORMULARIO -->
+        <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-md">
 
-<div class="flex-grow flex items-center justify-center">
+            <h2 class="text-3xl font-bold text-center mb-2">
+                Create Account
+            </h2>
 
-<div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-md">
+            <p class="text-gray-500 text-center mb-8">
+                Join QuickForm today
+            </p>
 
-<h2 class="text-3xl font-bold text-center mb-2">
-Create Account
-</h2>
 
-<p class="text-gray-500 text-center mb-8">
-Join QuickForm today
-</p>
+            <form class="space-y-4">
 
 
-<form class="space-y-4">
+                <!-- Nombre -->
+                <div class="relative">
 
-<!-- Nombre -->
+                    <i class="fa-solid fa-user absolute left-3 top-3 text-gray-400"></i>
 
-<div class="relative">
+                    <input
+                        type="text"
+                        placeholder="Nombre completo"
+                        class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-<i class="fa-solid fa-user absolute left-3 top-3 text-gray-400"></i>
+                </div>
 
-<input
-type="text"
-placeholder="Nombre completo"
-class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-</div>
+                <!-- Email -->
+                <div class="relative">
 
+                    <i class="fa-solid fa-at absolute left-3 top-3 text-gray-400"></i>
 
-<!-- Email -->
+                    <input
+                        type="email"
+                        placeholder="Correo electrónico"
+                        class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-<div class="relative">
+                </div>
 
-<i class="fa-solid fa-at absolute left-3 top-3 text-gray-400"></i>
 
-<input
-type="email"
-placeholder="Correo electrónico"
-class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                <!-- Password -->
+                <div class="relative">
 
-</div>
+                    <i class="fa-solid fa-lock absolute left-3 top-3 text-gray-400"></i>
 
+                    <!-- Checkbox oculto -->
+                    <input type="checkbox" id="mostrarPassword">
 
-<!-- Password -->
+                    <!-- Campo contraseña -->
+                    <input
+                        type="text"
+                        placeholder="Contraseña"
+                        class="password-field w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-<div class="relative">
+                    <!-- Icono ojo -->
+                    <label
+                        for="mostrarPassword"
+                        class="absolute right-3 top-3 text-gray-400 cursor-pointer">
 
-<i class="fa-solid fa-lock absolute left-3 top-3 text-gray-400"></i>
+                        <i class="fa-solid fa-eye"></i>
 
-<input
-type="password"
-placeholder="Contraseña"
-class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </label>
 
-</div>
+                </div>
 
 
-<!-- Teléfono -->
+                <!-- Teléfono -->
+                <div class="relative">
 
-<div class="relative">
+                    <i class="fa-solid fa-phone absolute left-3 top-3 text-gray-400"></i>
 
-<i class="fa-solid fa-phone absolute left-3 top-3 text-gray-400"></i>
+                    <input
+                        type="tel"
+                        placeholder="Teléfono"
+                        class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-<input
-type="tel"
-placeholder="Teléfono"
-class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                </div>
 
-</div>
 
+                <!-- País -->
+                <div class="relative">
 
-<!-- País -->
+                    <i class="fa-solid fa-earth-americas absolute left-3 top-3 text-gray-400"></i>
 
-<div class="relative">
+                    <select
+                        class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-<i class="fa-solid fa-earth-americas absolute left-3 top-3 text-gray-400"></i>
+                        <option selected disabled>Selecciona tu país</option>
+                        <option>México</option>
+                        <option>Colombia</option>
+                        <option>Argentina</option>
+                        <option>España</option>
 
-<select
-class="w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+                    </select>
 
-<option selected disabled>Selecciona tu país</option>
-<option>México</option>
-<option>Colombia</option>
-<option>Argentina</option>
-<option>España</option>
+                </div>
 
-</select>
 
-</div>
+                <!-- Términos -->
+                <div class="flex items-center gap-2 text-sm">
 
+                    <input type="checkbox">
 
-<!-- Términos -->
+                    <span>
+                        Acepto los términos y condiciones
+                    </span>
 
-<div class="flex items-center gap-2 text-sm">
+                </div>
 
-<input type="checkbox">
 
-<span>Acepto los términos y condiciones</span>
+                <!-- Botón -->
+                <button
+                    class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
 
-</div>
+                    Crear Cuenta
 
+                </button>
 
-<!-- Botón -->
 
-<button
-class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                <div class="text-center text-gray-500 text-sm">
+                    o regístrate con
+                </div>
 
-Crear Cuenta
 
-</button>
+                <!-- Redes -->
+                <div class="flex justify-center gap-6 text-2xl">
 
+                    <i class="fa-brands fa-google text-red-500"></i>
+                    <i class="fa-brands fa-facebook text-blue-600"></i>
+                    <i class="fa-brands fa-apple"></i>
 
-<div class="text-center text-gray-500 text-sm">
+                </div>
 
-o regístrate con
+            </form>
 
-</div>
+        </div>
 
+    </div>
 
-<div class="flex justify-center gap-6 text-2xl">
 
-<i class="fa-brands fa-google text-red-500"></i>
-<i class="fa-brands fa-facebook text-blue-600"></i>
-<i class="fa-brands fa-apple"></i>
+    <!-- FOOTER -->
+    <footer class="text-white text-center p-4">
 
-</div>
+        <p>© 2026 QuickForm</p>
 
-</form>
+        <p>
+            Desarrollado por <strong>Maricarmen Suarez ♡</strong>
+        </p>
 
-</div>
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer class="text-white text-center p-4">
-
-<p>© 2026 QuickForm</p>
-
-<p>Desarrollado por <strong> Maricarmen Suarez ♡ </strong></p>
-
-</footer>
+    </footer>
 
 
 </body>
