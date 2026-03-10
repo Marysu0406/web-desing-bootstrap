@@ -31,7 +31,7 @@
         }
 
         /* Mostrar contraseña cuando se presiona el ojo */
-        #mostrarPassword:checked ~ .password-field {
+        #mostrarPassword:checked + .password-field {
             -webkit-text-security: none;
         }
 
@@ -109,29 +109,31 @@
 
 
                 <!-- Password -->
-                <div class="relative">
+                
+<div class="relative">
 
-                    <i class="fa-solid fa-lock absolute left-3 top-3 text-gray-400"></i>
+    <i class="fa-solid fa-lock absolute left-3 top-3 text-gray-400"></i>
 
-                    <!-- Checkbox oculto -->
-                    <input type="checkbox" id="mostrarPassword">
+    <!-- Checkbox oculto -->
+    <input type="checkbox" id="mostrarPassword" class="hidden">
 
-                    <!-- Campo contraseña -->
-                    <input
-                        type="text"
-                        placeholder="Contraseña"
-                        class="password-field w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
+    <!-- Campo contraseña -->
+    <input
+        type="text"
+        id="password"
+        placeholder="Contraseña"
+        class="password-field w-full border rounded-lg px-10 py-2 focus:ring-2 focus:ring-blue-400 outline-none">
 
-                    <!-- Icono ojo -->
-                    <label
-                        for="mostrarPassword"
-                        class="absolute right-3 top-3 text-gray-400 cursor-pointer">
+    <!-- Icono ojo -->
+    <label
+        for="mostrarPassword"
+        class="absolute right-3 top-3 text-gray-400 cursor-pointer">
 
-                        <i class="fa-solid fa-eye"></i>
+        <i class="fa-solid fa-eye"></i>
 
-                    </label>
+    </label>
 
-                </div>
+</div>
 
 
                 <!-- Teléfono -->

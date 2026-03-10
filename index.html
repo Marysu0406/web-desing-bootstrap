@@ -2,41 +2,28 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de inscripción</title>
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/Img/favicon.png">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
+    <!-- FontAwesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <style>
-        /* Oculta el checkbox */
-        #mostrarPassword {
-            display: none;
-        }
-
-        /* Oculta visualmente la contraseña */
-        .password-field {
-            -webkit-text-security: disc;
-        }
-
-        /* Cuando se presiona el ojo se muestra */
-        #mostrarPassword:checked ~ .password-field {
-            -webkit-text-security: none;
-        }
-    </style>
 </head>
 
 <body class="bg-light d-flex flex-column min-vh-100">
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
         <div class="container">
 
             <a class="navbar-brand" href="#">
@@ -47,10 +34,13 @@
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#menuNavbar">
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
             <div class="collapse navbar-collapse" id="menuNavbar">
+
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
@@ -58,47 +48,58 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="tailwind.html">Formulario Tailwind</a>
+                        <a class="nav-link" href="tailwind.html">
+                            Formulario Tailwind
+                        </a>
                     </li>
 
                 </ul>
+
             </div>
 
         </div>
+
     </nav>
 
-    <!-- Contenido principal -->
+
+    <!-- CONTENIDO -->
     <main class="flex-grow-1 d-flex align-items-center justify-content-center">
 
         <div class="container" style="max-width:500px;">
 
-            <h2 class="text-center mb-2">Crea tu Cuenta Gratis</h2>
+            <h2 class="text-center mb-2">
+                Crea tu Cuenta Gratis
+            </h2>
+
             <p class="text-center text-muted mb-4">
                 Regístrate en segundos y comienza a explorar
             </p>
 
-            <form action="#" method="POST">
+            <form>
 
                 <!-- Nombre -->
                 <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre Completo</label>
+
+                    <label class="form-label">Nombre Completo</label>
 
                     <div class="position-relative">
 
-                        <i class="fa-solid fa-user-astronaut position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                        <i class="fa-solid fa-user position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
 
                         <input
                             type="text"
                             class="form-control ps-5"
-                            id="nombre"
                             placeholder="Ej. Sofía Rodríguez">
 
                     </div>
+
                 </div>
 
-                <!-- Correo -->
+
+                <!-- Email -->
                 <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
+
+                    <label class="form-label">Correo Electrónico</label>
 
                     <div class="position-relative">
 
@@ -107,67 +108,73 @@
                         <input
                             type="email"
                             class="form-control ps-5"
-                            id="email"
                             placeholder="tuemail@ejemplo.com">
 
                     </div>
+
                 </div>
 
-                <!-- Contraseña -->
+
+                <!-- Password -->
                 <div class="mb-3">
+
                     <label class="form-label">Contraseña</label>
 
                     <div class="position-relative">
 
                         <i class="fa-solid fa-lock position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
 
-                        <input type="checkbox" id="mostrarPassword">
-
                         <input
-                            type="text"
-                            class="form-control ps-5 pe-5 password-field"
+                            type="password"
+                            id="password"
+                            class="form-control ps-5 pe-5"
                             placeholder="********">
 
-                        <label
-                            for="mostrarPassword"
-                            class="position-absolute top-50 end-0 translate-middle-y me-3 text-muted"
+                        <i
+                            id="togglePassword"
+                            class="fa-solid fa-eye position-absolute top-50 end-0 translate-middle-y me-3 text-muted"
                             style="cursor:pointer;">
-
-                            <i class="fa-solid fa-eye"></i>
-
-                        </label>
+                        </i>
 
                     </div>
+
                 </div>
+
 
                 <!-- Teléfono -->
                 <div class="mb-3">
-                    <label for="telefono" class="form-label">Teléfono</label>
+
+                    <label class="form-label">Teléfono</label>
 
                     <div class="position-relative">
 
-                        <i class="fa-solid fa-mobile-button position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                        <i class="fa-solid fa-phone position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
 
                         <input
                             type="tel"
                             class="form-control ps-5"
-                            id="telefono"
                             placeholder="+34 600 123 456">
 
                     </div>
+
                 </div>
+
 
                 <!-- País -->
                 <div class="mb-4">
-                    <label for="pais" class="form-label">País</label>
+
+                    <label class="form-label">País</label>
 
                     <div class="position-relative">
 
                         <i class="fa-solid fa-earth-americas position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
 
-                        <select class="form-select ps-5" id="pais">
+                        <select class="form-select ps-5">
 
-                            <option selected disabled>Seleccionar</option>
+                            <option selected disabled>
+                                Seleccionar
+                            </option>
+
                             <option>México</option>
                             <option>Colombia</option>
                             <option>Argentina</option>
@@ -176,41 +183,40 @@
                         </select>
 
                     </div>
+
                 </div>
 
+
                 <!-- Términos -->
-                <div class="mb-3 form-check d-flex justify-content-center align-items-center gap-2">
+                <div class="mb-3 form-check text-center">
 
                     <input
                         type="checkbox"
-                        class="form-check-input mt-0"
-                        id="terminos">
+                        class="form-check-input">
 
-                    <label class="form-check-label" for="terminos">
-                        Acepto los <a href="#">Términos y Condiciones</a>
+                    <label class="form-check-label">
+                        Acepto los términos y condiciones
                     </label>
 
                 </div>
 
+
                 <!-- Botón -->
-                <button
-                    type="submit"
-                    class="btn btn-primary w-100 mb-4">
-
+                <button class="btn btn-primary w-100 mb-4">
                     CREAR CUENTA
-
                 </button>
 
+
                 <!-- Redes -->
-                <div class="d-flex justify-content-center align-items-center gap-2">
+                <div class="text-center">
 
-                    <span>O regístrate con:</span>
+                    <span>O regístrate con</span>
 
-                    <div class="d-flex gap-3 fs-5">
+                    <div class="d-flex justify-content-center gap-3 mt-2 fs-5">
 
-                        <i class="fa-brands fa-google text-primary" style="cursor:pointer;"></i>
-                        <i class="fa-brands fa-facebook-f text-primary" style="cursor:pointer;"></i>
-                        <i class="fa-brands fa-apple" style="cursor:pointer;"></i>
+                        <i class="fa-brands fa-google text-danger"></i>
+                        <i class="fa-brands fa-facebook text-primary"></i>
+                        <i class="fa-brands fa-apple"></i>
 
                     </div>
 
@@ -222,21 +228,34 @@
 
     </main>
 
-    <!-- Footer -->
+
+    <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-4">
 
-        <div class="container">
-
-            <p class="mb-1">©2026</p>
-            <p class="mb-2">
-                Desarrollado por <strong>Maricarmen Suárez ♡</strong>
-            </p>
-
-        </div>
+        <p>©2026</p>
+        <p>Desarrollado por <strong>Maricarmen Suárez ♡</strong></p>
 
     </footer>
 
+
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Mostrar contraseña -->
+    <script>
+
+        const togglePassword = document.getElementById("togglePassword");
+        const password = document.getElementById("password");
+
+        togglePassword.addEventListener("click", function () {
+
+            const type = password.type === "password" ? "text" : "password";
+            password.type = type;
+
+        });
+
+    </script>
 
 </body>
 </html>
